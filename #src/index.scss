@@ -1,0 +1,61 @@
+//-----------------------ПЕРЕМЕННЫЕ--------------------------------
+$maxWidth: 1400px;
+$minWidth: 350px;
+$maxWidthContainer: 1140px;
+$bgHeightStart: 90px;
+$bgHeightEnd: 200px;
+//------------------------------------------------------------------
+@import "css_init/normalize.scss";
+@import "css_init/fonts.scss";
+//------------------ОБШИЕ ПАРАМЕТРЫ--------------------------------
+body {
+   font-family: Roboto;
+   width: 100%;
+}
+
+//-----------------------------ОБОЛОЧКА ----------------------------------
+.wrapper {
+   max-width: $maxWidth;
+   margin: 0 auto;
+   min-width: $minWidth;
+}
+.container {
+   max-width: $maxWidthContainer;
+   margin: 0 auto;
+   padding: 0;
+}
+//********************************** ОБЩИЕ ЭЛЕМЕНТЫ ***************************************
+.burger {
+   background-color: #068292; //#068292
+   border: none;
+   max-height: 35px;
+   max-width: 36px;
+   padding: 5px 6px;
+}
+
+.burger__bar1,
+.burger__bar2,
+.burger__bar3 {
+   width: 24px;
+   height: 2px;
+   background-color: #fff;
+   margin: 5px 0;
+   transition: 0.4s;
+}
+.change {
+   .burger__bar1 {
+      transform: rotate(-45deg) translate(-4px, 5px);
+   }
+   .burger__bar2 {
+      opacity: 0;
+   }
+   .burger__bar3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+   }
+}
+//------------------------------------------------------------------
+
+@import "header/header.scss";
+@import "main/main.scss";
+
+//----------------------------------------------------------------

@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Play:700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,900);
+@mixin font($fnt_family, $fnt_file, $fnt_weight, $fnt_style) {
+   @font-face {
+      font-family: $fnt_family;
+      src: url("../fonts/" + $fnt_file + ".woff") format("woff"),
+         url("../fonts/" + $fnt_file + ".ttf") format("truetype");
+      font-weight: $fnt_weight;
+      font-style: $fnt_style;
+   }
+}
+@include font("uniSans", "unisanscaps", 700, normal);
